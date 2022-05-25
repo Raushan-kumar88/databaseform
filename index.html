@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form data submit</title>
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: lightgreen;
+            color: white;
+        }
+        .container{
+            width: 600px;
+            height: auto;
+            margin:100px auto ;
+            /* border: 1px solid black; */
+            align-items: center;
+            justify-content: center;
+            /* display: block; */
+            background: white;
+            color: black;
+            box-shadow: 3px 4px 6px rgba(0,0,0,0.5);
+        }
+        .container form{
+            width: 100%;
+            margin: 10px 20px;
+        } 
+        .container form label{
+            margin: 10px 50px ;
+            /* border: 1px solid black; */
+        }
+        .container form input{
+            width: 60%;
+            margin: 10px;
+            padding: 4px 10px;
+            height: 40px;
+            font-size: 16px;
+            border-radius: 6px; 
+            outline: none;
+            border: 1px solid gray;
+            box-shadow: inset 4px 3px 4px white;
+
+        }
+        .container form select{
+            /* margin-left: 7px; */
+            width: 60%;
+            height: 40px;
+            font-size: 18px;
+            border-radius: 6px; 
+            outline: none;
+            border: 1px solid gray;
+        }
+        .container h1{
+            padding: 40px;
+        }
+        .container form button{
+            width: 300px;
+            height: 40px;
+            margin:5% 25%;
+            font-size: 18px;
+            margin-bottom: 100px;
+
+        }
+        .container input:focus{
+            border-color: lightgreen;
+        }
+        /* @media(max-width: 700px) { */
+  /* body {
+    background-color: lightgreen;
+  }
+  .container {
+     
+      height: 90%;
+      
+      width: 100%;
+  }
+  .container form{
+
+  }
+} */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 align="center">REGISTRATION FORM</h1> <br>
+    <form action="process.php" method="post">
+        <label>Name</label><input type="text" name="name"><br>
+        <label>Email</label><input type="email" name="email"><br>
+        <label>Gender</label>
+        <select name="gender">
+            <option>select gender</option>
+            <option value="male">Male</option>
+            <option value="female">female</option>
+            <option value="other">other</option>
+        </select>
+        <br>
+        <button type="submit" name="submit">Register</button>
+    </form>
+</div>
+</body>
+</html>
